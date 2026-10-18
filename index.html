@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>André Queiroz — Web & Front-end Developer</title>
+    <meta
+      name="description"
+      content="Portfólio de André Queiroz: Desenvolvedor Web, Front-end moderno, Python/Django, APIs REST e manutenção de sistemas em produção."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <header class="header">
+      <div class="container header-container">
+        <div class="brand">
+          <button
+            id="headerPhotoBtn"
+            class="avatar-btn"
+            title="Alterar foto de perfil"
+          >
+            <img
+              id="navAvatar"
+              src="images/eu.jpg"
+              alt="André Queiroz"
+              onerror="
+                this.src =
+                  'https://avatars.githubusercontent.com/u/286477017?v=4'
+              "
+            />
+          </button>
+          <a href="#hero" class="brand-title">André Queiroz</a>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#work">Projetos</a>
+          <a href="#work" onclick="switchWorkTab('maintenance')"
+            >Manutenção de Sites</a
+          >
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="header-action">
+          <a
+            href="https://wa.me/5581999999999?text=Ol%C3%A1%20Andr%C3%A9,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!"
+            target="_blank"
+            rel="noreferrer"
+            class="btn btn-primary btn-sm"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <!-- Fundo animado de partículas -->
+      <canvas id="particle-canvas"></canvas>
+
+      <div class="container hero-container">
+        <!-- Left Column: Typographic Presentation -->
+        <div class="hero-content">
+          <div class="dev-badge">
+            <button
+              id="heroPhotoBtn"
+              class="hero-avatar-btn"
+              title="Clique para trocar sua foto"
+            >
+              <img
+                id="heroAvatar"
+                src="images/eu.jpg"
+                alt="André Queiroz"
+
+              />
+              <span class="avatar-hover-label">Trocar</span>
+            </button>
+            <div class="dev-badge-info">
+              <span class="dev-name">André Queiroz</span>
+              <span class="dev-role">Web & Front-end Developer</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">Welcome.</h1>
+
+          <p class="hero-description">
+            Meu nome é André Queiroz, desenvolvedor web e front-end baseado no
+            Brasil. Trabalho no desenvolvimento de aplicações completas, desde
+            sistemas de gestão clínica (ERP) e plataformas interativas, até a
+            manutenção e melhoria contínua de portais educacionais e
+            científicos. Foco em criar código limpo, interfaces fluidas e
+            experiências digitais sem fricção.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">Ver Projetos</a>
+            <button id="copyEmailBtn" class="btn btn-glass">
+              Copiar E-mail
+            </button>
+            <a
+              href="https://github.com/andrequeiroooz"
+              target="_blank"
+              rel="noreferrer"
+              class="btn btn-glass btn-icon"
+            >
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual -->
+        <div class="hero-visual">
+          <div class="visual-wrapper">
+            <img
+              src="images/isometric_code_workspace_1792276839697.jpg"
+              alt="Ilustração isométrica"
+              class="isometric-image"
+              onerror="this.style.display = 'none'"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="wave-divider">
+        <svg viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none">
+          <path d="M0 65C360 10 1080 10 1440 65V90H0V65Z" fill="#ffffff" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- My Work Section -->
+    <section id="work" class="work-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">My Work</h2>
+          <p class="section-subtitle">
+            A collection of projects I've worked on.
+          </p>
+
+          <div class="tab-controls">
+            <button
+              id="tabFeatured"
+              class="tab-btn active"
+              onclick="switchWorkTab('featured')"
+            >
+              Desenvolvidos do Zero (3)
+            </button>
+            <button
+              id="tabMaintenance"
+              class="tab-btn"
+              onclick="switchWorkTab('maintenance')"
+            >
+              Manutenção de Sites
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab 1: Developed by André -->
+        <div id="viewFeatured" class="projects-grid">
+          <!-- Project 1 -->
+          <article class="browser-card">
+            <div class="browser-header">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span
+                ><span class="dot dot-yellow"></span
+                ><span class="dot dot-green"></span>
+              </div>
+              <div class="browser-url">
+                afternoon-senorita-overcome.ngrok-free.dev
+              </div>
+              <div class="browser-space"></div>
+            </div>
+            <div class="browser-preview" onclick="openCaseStudy('psyerp')">
+              <img
+                src="images/psi.jpeg"
+
+              />
+              <div class="preview-overlay"><span>Ver Estudo de Caso</span></div>
+            </div>
+            <div class="browser-body">
+              <div class="project-meta">
+                <span class="project-tag">Sistema Web ERP</span
+                ><span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title" onclick="openCaseStudy('psyerp')">
+                PsyERP — Gestão para Psicólogos
+              </h3>
+              <p class="project-desc">
+                SaaS completo de gestão clínica com agendamento de sessões,
+                prontuário confidencial e fluxo de caixa.
+              </p>
+              <div class="project-footer">
+                <button class="link-btn" onclick="openCaseStudy('psyerp')">
+                  Estudo de Caso →
+                </button>
+                <a
+                  href="https://afternoon-senorita-overcome.ngrok-free.dev"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn-direct"
+                  >Acessar ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="browser-card">
+            <div class="browser-header">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span
+                ><span class="dot dot-yellow"></span
+                ><span class="dot dot-green"></span>
+              </div>
+              <div class="browser-url">andrequeiroooz.github.io/aelsolar</div>
+              <div class="browser-space"></div>
+            </div>
+            <div class="browser-preview" onclick="openCaseStudy('aelsolar')">
+              <img
+                src="images/energia.jpeg"
+                alt="AelSolar Mockup"
+
+              />
+              <div class="preview-overlay"><span>Ver Estudo de Caso</span></div>
+            </div>
+            <div class="browser-body">
+              <div class="project-meta">
+                <span class="project-tag">Energia Solar & Simulador</span
+                ><span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title" onclick="openCaseStudy('aelsolar')">
+                AelSolar — Plataforma Solar
+              </h3>
+              <p class="project-desc">
+                Site institucional com simulador interativo em tempo real de
+                redução na conta de luz e payback financeiro.
+              </p>
+              <div class="project-footer">
+                <button class="link-btn" onclick="openCaseStudy('aelsolar')">
+                  Estudo de Caso →
+                </button>
+                <a
+                  href="https://andrequeiroooz.github.io/aelsolar/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn-direct"
+                  >Acessar ↗</a
+                >
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="browser-card">
+            <div class="browser-header">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span
+                ><span class="dot dot-yellow"></span
+                ><span class="dot dot-green"></span>
+              </div>
+              <div class="browser-url">ibjordao.vercel.app</div>
+              <div class="browser-space"></div>
+            </div>
+            <div class="browser-preview" onclick="openCaseStudy('ibjordao')">
+              <img
+                src="images/jordao.jpeg"
+                alt="IB Jordão Mockup"
+
+              />
+              <div class="preview-overlay"><span>Ver Estudo de Caso</span></div>
+            </div>
+            <div class="browser-body">
+              <div class="project-meta">
+                <span class="project-tag">Portal Web Institucional</span
+                ><span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title" onclick="openCaseStudy('ibjordao')">
+                IB Jordão — Portal Comunitário
+              </h3>
+              <p class="project-desc">
+                Plataforma institucional mobile-first hospedada na Vercel com
+                carregamento sub-segundo e alto engajamento.
+              </p>
+              <div class="project-footer">
+                <button class="link-btn" onclick="openCaseStudy('ibjordao')">
+                  Estudo de Caso →
+                </button>
+                <a
+                  href="https://ibjordao.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="btn-direct"
+                  >Acessar ↗</a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Tab 2: Maintenance -->
+        <div
+          id="viewMaintenance"
+          class="maintenance-view"
+          style="display: none"
+        >
+          <div class="banner-box">
+            <span class="badge-status">Confiabilidade & Manutenção</span>
+            <h3 class="banner-title">
+              Ecossistema Camp-Sci (Medicina & Educação)
+            </h3>
+            <p class="banner-desc">
+              Atuo no suporte técnico contínuo, manutenção preventiva e
+              corretiva de interfaces, estabilidade e integridade de plataformas
+              para milhares de estudantes e pesquisadores ativos.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Maint 1 -->
+            <article class="browser-card">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="dot dot-red"></span
+                  ><span class="dot dot-yellow"></span
+                  ><span class="dot dot-green"></span>
+                </div>
+                <div class="browser-url">curso.camp-sci.com</div>
+                <div class="browser-space"></div>
+              </div>
+              <div class="browser-preview">
+                <img
+                  src="images/1.jpeg"
+                  alt="Camp-Sci Mockup"
+                />
+                <div class="preview-overlay">
+                  <a
+                    href="https://curso.camp-sci.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style="text-decoration: none"
+                    ><span>Acessar Site ↗</span></a
+                  >
+                </div>
+              </div>
+              <div class="browser-body">
+                <div class="project-meta">
+                  <span class="project-tag">Plataforma EAD</span>
+                </div>
+                <h3 class="project-title">Camp-Sci Cursos</h3>
+                <p class="project-desc">
+                  Manutenção de ambiente LMS com videoaulas e módulos
+                  acadêmicos.
+                </p>
+                <div class="project-footer">
+                  <a
+                    href="https://curso.camp-sci.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn-direct"
+                    >Acessar ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Maint 2 -->
+            <article class="browser-card">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="dot dot-red"></span
+                  ><span class="dot dot-yellow"></span
+                  ><span class="dot dot-green"></span>
+                </div>
+                <div class="browser-url">curso.camp-sci.com/ayahuasca...</div>
+                <div class="browser-space"></div>
+              </div>
+              <div class="browser-preview">
+                <img
+                  src="images/2.jpeg"
+                  alt="Camp-Sci Ayahuasca Mockup"
+                />
+                <div class="preview-overlay">
+                  <a
+                    href="https://curso.camp-sci.com/ayahuasca-ciencia-e-saberes-tradicionais/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style="text-decoration: none"
+                    ><span>Acessar Site ↗</span></a
+                  >
+                </div>
+              </div>
+              <div class="browser-body">
+                <div class="project-meta">
+                  <span class="project-tag">Landing Page</span>
+                </div>
+                <h3 class="project-title">Curso Especializado</h3>
+                <p class="project-desc">
+                  Ajustes de conversão e front-end para o funil de inscrições
+                  ativas.
+                </p>
+                <div class="project-footer">
+                  <a
+                    href="https://curso.camp-sci.com/ayahuasca-ciencia-e-saberes-tradicionais/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn-direct"
+                    >Acessar ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Maint 3 -->
+            <article class="browser-card">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="dot dot-red"></span
+                  ><span class="dot dot-yellow"></span
+                  ><span class="dot dot-green"></span>
+                </div>
+                <div class="browser-url">curso.camp-sci.com/campclinic1</div>
+                <div class="browser-space"></div>
+              </div>
+              <div class="browser-preview">
+                <img
+                  src="https://placehold.co/600x400/f8fafc/64748b?text=CampClinic1"
+                  alt="CampClinic Mockup"
+                />
+                <div class="preview-overlay">
+                  <a
+                    href="https://curso.camp-sci.com/campclinic1/"
+                    target="_blank"
+                    rel="noreferrer"
+                    style="text-decoration: none"
+                    ><span>Acessar Site ↗</span></a
+                  >
+                </div>
+              </div>
+              <div class="browser-body">
+                <div class="project-meta">
+                  <span class="project-tag">Módulo Clínico</span>
+                </div>
+                <h3 class="project-title">CampClinic 1</h3>
+                <p class="project-desc">
+                  Manutenção de front-end para módulo de atendimento e pesquisa.
+                </p>
+                <div class="project-footer">
+                  <a
+                    href="https://curso.camp-sci.com/campclinic1/"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn-direct"
+                    >Acessar ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Maint 4 -->
+            <article class="browser-card">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="dot dot-red"></span
+                  ><span class="dot dot-yellow"></span
+                  ><span class="dot dot-green"></span>
+                </div>
+                <div class="browser-url">www.camp-sci.com/pt</div>
+                <div class="browser-space"></div>
+              </div>
+              <div class="browser-preview">
+                <img
+                  src="images/4.jpeg"
+                  alt="Camp-Sci Portal Mockup"
+                />
+                <div class="preview-overlay">
+                  <a
+                    href="https://www.camp-sci.com/pt"
+                    target="_blank"
+                    rel="noreferrer"
+                    style="text-decoration: none"
+                    ><span>Acessar Site ↗</span></a
+                  >
+                </div>
+              </div>
+              <div class="browser-body">
+                <div class="project-meta">
+                  <span class="project-tag">Portal Global</span>
+                </div>
+                <h3 class="project-title">Portal Institucional</h3>
+                <p class="project-desc">
+                  Site oficial multilíngue com apresentação de projetos.
+                </p>
+                <div class="project-footer">
+                  <a
+                    href="https://www.camp-sci.com/pt"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn-direct"
+                    >Acessar ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Maint 5 -->
+            <article class="browser-card">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="dot dot-red"></span
+                  ><span class="dot dot-yellow"></span
+                  ><span class="dot dot-green"></span>
+                </div>
+                <div class="browser-url">www.camp-sci.com/pt/blog</div>
+                <div class="browser-space"></div>
+              </div>
+              <div class="browser-preview">
+                <img
+                  src="images/5.jpeg"
+                  alt="Camp-Sci Blog Mockup"
+                />
+                <div class="preview-overlay">
+                  <a
+                    href="https://www.camp-sci.com/pt/blog"
+                    target="_blank"
+                    rel="noreferrer"
+                    style="text-decoration: none"
+                    ><span>Acessar Site ↗</span></a
+                  >
+                </div>
+              </div>
+              <div class="browser-body">
+                <div class="project-meta">
+                  <span class="project-tag">Editorial</span>
+                </div>
+                <h3 class="project-title">Blog Científico</h3>
+                <p class="project-desc">
+                  Manutenção de UI/UX focada em leitura e artigos aprofundados.
+                </p>
+                <div class="project-footer">
+                  <a
+                    href="https://www.camp-sci.com/pt/blog"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="btn-direct"
+                    >Acessar ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about-section">
+      <div class="container about-container">
+        <div class="about-intro">
+          <h2 class="about-title">Sobre Mim</h2>
+          <p class="about-lead">
+            Com foco em código limpo, facilidade de comunicação e entrega
+            orientada a valor de negócio, atuo em todo o ciclo do
+            desenvolvimento web. Minha bagagem combina a solidez do back-end
+            (Python/Django, APIs REST) com a sensibilidade de UX/UI front-end
+            (responsividade e velocidade). Além de criar do zero, possuo forte
+            vivência em manutenção e suporte ativo de sistemas em produção.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-column">
+            <h3 class="skill-cat-title">Back-end & Arquitetura</h3>
+            <p class="skill-cat-desc">
+              Python, Django, REST Framework, PostgreSQL e estruturação de
+              dados.
+            </p>
+          </div>
+          <div class="skill-column">
+            <h3 class="skill-cat-title">Front-end & Interfaces</h3>
+            <p class="skill-cat-desc">
+              JavaScript moderno (ES6+), HTML5, CSS3 e foco na jornada do
+              usuário.
+            </p>
+          </div>
+          <div class="skill-column">
+            <h3 class="skill-cat-title">Sustentação & Versionamento</h3>
+            <p class="skill-cat-desc">
+              Git/GitHub, manutenção corretiva, deploy ágil na Vercel e suporte
+              técnico.
+            </p>
+          </div>
+        </div>
+
+        <div class="metrics-row">
+          <div class="metric-item">
+            <span class="metric-number">5+</span>
+            <span class="metric-label">Plataformas em Produção</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">99.8%</span>
+            <span class="metric-label">Uptime Sustentado</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">REST</span>
+            <span class="metric-label">Integração de APIs</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">100%</span>
+            <span class="metric-label">Compromisso com o Projeto</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact-section">
+      <div class="container text-center">
+        <h2 class="contact-title">Vamos conversar?</h2>
+        <p class="contact-subtitle">
+          Estou disponível para novas oportunidades de trabalho como
+          Desenvolvedor Web Front-end/Back-end, além de projetos freelancer e
+          manutenção de sistemas.
+        </p>
+
+        <div class="contact-buttons">
+          <a
+            href="https://wa.me/5584991941895?text=Ol%C3%A1%20Andr%C3%A9,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!"
+            target="_blank"
+            rel="noreferrer"
+            class="btn btn-whatsapp"
+          >
+            Falar no WhatsApp
+          </a>
+          <button id="copyContactEmailBtn" class="btn btn-light">
+            Copiar E-mail
+          </button>
+          <a
+            href="https://github.com/andrequeiroooz"
+            target="_blank"
+            rel="noreferrer"
+            class="btn btn-light btn-icon"
+          >
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              />
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clean Minimal Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div>
+          <div class="footer-brand">André Queiroz</div>
+          <p class="footer-desc">Web & Front-end Developer · Python/Django</p>
+        </div>
+
+        <div class="footer-links">
+          <a
+            href="https://github.com/andrequeiroooz"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+          <a href="https://wa.me/5584991941895" target="_blank" rel="noreferrer"
+            >WhatsApp</a
+          >
+          <a href="mailto:andrequeiroooz@gmail.com">E-mail</a>
+          <a href="#hero">Topo ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal: Case Study -->
+    <div id="caseStudyModal" class="modal-backdrop" style="display: none">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div>
+            <span id="csCategory" class="modal-category">Projeto</span>
+            <h2 id="csTitle" class="modal-title">Título do Projeto</h2>
+            <p id="csSubtitle" class="modal-subtitle">Subtítulo</p>
+          </div>
+          <button class="modal-close" onclick="closeCaseStudy()">✕</button>
+        </div>
+        <div class="modal-preview-box">
+          <img id="csImage" src="" alt="Screenshot" />
+        </div>
+        <div class="modal-actions-bar">
+          <span id="csRoleInfo" class="role-text">Desenvolvedor</span>
+          <a
+            id="csLiveLink"
+            href="#"
+            target="_blank"
+            rel="noreferrer"
+            class="btn btn-primary btn-sm"
+            >Acessar Projeto ao Vivo ↗</a
+          >
+        </div>
+        <div class="modal-sections">
+          <div class="cs-block problem">
+            <h4>1. Problema Resolvido</h4>
+            <p id="csProblem"></p>
+          </div>
+          <div class="cs-block solution">
+            <h4>2. Solução Aplicada</h4>
+            <p id="csSolution"></p>
+          </div>
+          <div class="cs-block tech">
+            <h4>3. Tecnologias Utilizadas</h4>
+            <div id="csTechList" class="tech-tags"></div>
+          </div>
+          <div class="cs-block impact">
+            <h4>4. Impacto / Resultado Gerado</h4>
+            <p id="csImpact"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" onclick="closeCaseStudy()">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Photo Customizer -->
+    <div id="photoModal" class="modal-backdrop" style="display: none">
+      <div class="modal-card small-modal">
+        <div class="modal-header">
+          <div><h3 class="modal-title">Personalizar Foto do Portfólio</h3></div>
+          <button class="modal-close" onclick="closePhotoModal()">✕</button>
+        </div>
+        <div class="photo-preview-center">
+          <img
+            id="modalPreviewPhoto"
+            src="images/andre_queiroz_profile_1792276840671.jpg"
+            alt="Preview da foto"
+          />
+        </div>
+        <div class="upload-options">
+          <label class="file-upload-btn">
+            <span>Escolher arquivo de foto do computador</span>
+            <input type="file" id="photoFileInput" accept="image/*" />
+          </label>
+          <form id="urlPhotoForm" class="url-input-group">
+            <input
+              type="url"
+              id="photoUrlInput"
+              placeholder="https://exemplo.com/sua-foto.jpg"
+            />
+            <button type="submit" class="btn btn-primary btn-sm">
+              Aplicar
+            </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="link-btn" onclick="resetDefaultPhoto()">
+            Restaurar Padrão
+          </button>
+          <button class="btn btn-light" onclick="closePhotoModal()">
+            Concluir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast" style="display: none">E-mail copiado! ✓</div>
+
+    <!-- Scripts: ATENÇÃO, ESTA LINHA TEM QUE FICAR AQUI NO FINAL! -->
+    <script src="script.js"></script>
+  </body>
+</html>
